@@ -10,4 +10,4 @@ runs:
     using: 'composite'
     steps:
      - run: echo Hello ${{ inputs.Who }}.
-      shell: bash
+       shell: bash
