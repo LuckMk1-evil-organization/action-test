@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: test
-        uses:  LuckMk1-evil-organization/action-test@v2
+        uses:  LuckMk1-evil-organization/action-test@v3
         with:
           Who: 'Le monde !'
