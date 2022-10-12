@@ -1,0 +1,13 @@
+name: 'Say Hello'
+description: 'Logs "Hello {input} in logs.'
+ 
+inputs:
+    Who:
+        description: "Who to log ?"
+        required: true
+        default: "World"
+runs:
+    using: 'composite'
+    steps:
+     - run: echo Hello ${{ inputs.Who }}.
+      shell: bash
