@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: action-test/composite@v1
+      - uses: composite@v1
         with:
           Who: 'Le monde !'
