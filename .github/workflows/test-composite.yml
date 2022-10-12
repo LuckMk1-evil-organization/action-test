@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses:  LuckMk1-evil-organization/action-test/composite@v1
+      - uses: actions/checkout@v3
+      - id: test
+        uses:  LuckMk1-evil-organization/action-test/composite@v1
         with:
           Who: 'Le monde !'
