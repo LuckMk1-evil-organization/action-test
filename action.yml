@@ -1,13 +1,16 @@
-name: 'Say Hello'
-description: 'Logs "Hello {input} in logs.'
- 
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
-    Who:
-        description: "Who to log ?"
-        required: true
-        default: "World"
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
-    using: 'composite'
-    steps:
-     - run: echo Hello ${{ inputs.Who }}.
-       shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
