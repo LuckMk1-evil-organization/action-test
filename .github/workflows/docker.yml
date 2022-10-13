@@ -1,4 +1,5 @@
-on: worflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   hello_world_job:
